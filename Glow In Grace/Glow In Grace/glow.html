@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glow in Grace</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #fffdf9;
+        color: #333;
+      }
+
+      header {
+        background-color: #f8e1e7;
+        color: #5c2a50;
+        padding: 1.5rem;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+      }
+
+      .verse {
+        font-style: italic;
+        margin-top: 0.5rem;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        background-color: #f2cbd0;
+      }
+
+      nav ul li {
+        margin: 0 1rem;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #5c2a50;
+        font-weight: bold;
+      }
+
+      main {
+        padding: 2rem;
+      }
+
+      section {
+        margin-bottom: 3rem;
+      }
+
+      h2 {
+        color: #b35d7a;
+      }
+
+      .tip-card {
+        background-color: #fef3f4;
+        border-left: 5px solid #b35d7a;
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 8px;
+      }
+
+      blockquote {
+        font-style: italic;
+        color: #7a4a58;
+        margin-top: 0.5rem;
+      }
+
+      button {
+        background-color: #b35d7a;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #993d5a;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      input,
+      textarea {
+        padding: 0.75rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+
+      footer {
+        background-color: #f8e1e7;
+        text-align: center;
+        padding: 2rem 1rem;
+        color: #5c2a50;
+      }
+
+      .contact-details p {
+        margin: 0.25rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Glow in Grace</h1>
+      <p class="verse">
+        "You are fearfully and wonderfully made – Psalm 139:14"
+      </p>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#hair">Hair Tips</a></li>
+          <li><a href="#beauty">Beauty Tips</a></li>
+          <li><a href="#faith">Scriptures</a></li>
+          <li><a href="#devotionals">Devotionals</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hair Tips Section -->
+      <section id="hair">
+        <h2>Hair Care Tips</h2>
+        <div class="tip-card">
+          <h3>Deep Conditioning for Natural Hair</h3>
+          <p>Use avocado and honey once a week for moisture.</p>
+          <blockquote>
+            “Your hair is like a crown of glory” – Proverbs 16:31
+          </blockquote>
+        </div>
+        <div class="tip-card">
+          <h3>Protective Styling</h3>
+          <p>Braids, buns, and twists help prevent breakage.</p>
+          <blockquote>
+            “Even the hairs on your head are all numbered.” – Luke 12:7
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- Beauty Tips Section -->
+      <section id="beauty">
+        <h2>Beauty Tips</h2>
+        <div class="tip-card">
+          <h3>Natural Glow</h3>
+          <p>Use aloe vera gel as a natural primer.</p>
+          <blockquote>
+            “Let the beauty of the Lord our God be upon us.” – Psalm 90:17
+          </blockquote>
+        </div>
+        <div class="tip-card">
+          <h3>Gentle Skincare</h3>
+          <p>Cleansing with rose water can reduce irritation.</p>
+          <blockquote>
+            “Create in me a clean heart, O God.” – Psalm 51:10
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- Faith Section -->
+      <section id="faith">
+        <h2>Verse of the Day</h2>
+        <p id="verse"></p>
+        <button onclick="copyVerse()">Share this verse</button>
+      </section>
+
+      <!-- Devotionals Section -->
+      <section id="devotionals">
+        <h2>Devotionals</h2>
+        <article>
+          <h3>Rooted in Identity</h3>
+          <p>True beauty begins when we understand who we are in Christ.</p>
+        </article>
+        <article>
+          <h3>Grace Over Perfection</h3>
+          <p>Faith reminds us we don't need to be perfect to be loved.</p>
+        </article>
+      </section>
+
+      <!-- Future Features (Optional Additions) -->
+      <section id="extras">
+        <h2>Coming Soon</h2>
+        <ul>
+          <li>Hair Quiz: What’s your crown type?</li>
+          <li>Testimonies from our sisters in faith</li>
+          <li>Blog posts and guest writers</li>
+          <li>Embedded Christian beauty vlogs</li>
+          <li>Newsletter sign-up</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea
+          placeholder="Your Message or Prayer Request"
+          required
+        ></textarea>
+        <button type="submit">Send</button>
+      </form>
+
+      <div class="contact-details">
+        <p>
+          Email:
+          <a href="mailto:ruthmucavele@icloud.com">ruthmucavele@icloud.com</a>
+        </p>
+        <p>Phone: <a href="tel:+27646576954">+27 64 657 6954</a></p>
+      </div>
+
+      <p>&copy; 2025 Glow in Grace. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const verses = [
+        "You are altogether beautiful, my love; there is no flaw in you. – Song of Solomon 4:7",
+        "Charm is deceptive and beauty is fleeting, but a woman who fears the Lord is to be praised. – Proverbs 31:30",
+        "Let your beauty not be outward… but from a gentle and quiet spirit. – 1 Peter 3:3-4",
+      ];
+
+      document.getElementById("verse").innerText =
+        verses[Math.floor(Math.random() * verses.length)];
+
+      function copyVerse() {
+        const verseText = document.getElementById("verse").innerText;
+        navigator.clipboard
+          .writeText(verseText)
+          .then(() => alert("Verse copied to clipboard!"))
+          .catch((err) => alert("Failed to copy verse."));
+      }
+    </script>
+  </body>
+</html>
